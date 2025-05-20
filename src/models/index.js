@@ -1,1 +1,1 @@
-import { default as PublicRoutes } from './routes'
+import { PublicRoutes } from './routes'

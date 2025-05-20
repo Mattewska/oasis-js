@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 //? components and models
 import { PublicRoutes } from './models'
-import AboutMe from './pages/AboutMe'
+import { AboutMe } from './pages/AboutMe'
 
 function App() {
 

@@ -1,4 +1,4 @@
-export const publicRoutes = {
+export const PublicRoutes = {
     Products: 'products',
     AboutMe: 'aboutMe'
 }
