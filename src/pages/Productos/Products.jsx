@@ -1,6 +1,38 @@
+import gallinas from '../../assets/gallinas1.jpeg'
+import galpon from '../../assets/galpon1.jpeg'
+import patos from '../../assets/patos1.jpeg'
+import vacas from '../../assets/vacas1.jpeg'
+import peces from '../../assets/piscicultura1.jpeg'
+//? css
+import './products.css'
+
+
 function Products() {
     return (
-        <div>Products</div>
+        <>
+            <main>
+                <figure>
+                    <img src={gallinas} alt="gallinas" />
+                    <figcaption>gallinas</figcaption>
+                </figure>
+                <figure>
+                    <img src={galpon} alt="gallinas" />
+                    <figcaption>galpon</figcaption>
+                </figure>
+                <figure>
+                    <img src={patos} alt="gallinas" />
+                    <figcaption>patos</figcaption>
+                </figure>
+                <figure>
+                    <img src={vacas} alt="gallinas" />
+                    <figcaption>vacas</figcaption>
+                </figure>
+                <figure>
+                    <img src={peces} alt="gallinas" />
+                    <figcaption>peces</figcaption>
+                </figure>
+            </main>
+        </>
     )
 }
 export {Products}
