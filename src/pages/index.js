@@ -1,1 +1,0 @@
-import { default as AboutMe } from './AboutMe'

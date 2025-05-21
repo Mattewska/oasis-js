@@ -1,5 +1,7 @@
-export function AboutMe() {
+function AboutMe() {
     return (
         <div>AboutMe</div>
     )
 }
+
+export { AboutMe }
