@@ -1,6 +1,6 @@
 function Donar() {
     return (
-        <div>Donar</div>
+        <main className="main"></main>
     )
 }
 export default Donar
