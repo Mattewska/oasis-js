@@ -10,29 +10,31 @@ import './products.css'
 function Products() {
     return (
         <>
-            <main>
-                <figure>
-                    <img src={gallinas} alt="gallinas" />
-                    <figcaption>gallinas</figcaption>
-                </figure>
-                <figure>
-                    <img src={galpon} alt="gallinas" />
-                    <figcaption>galpon</figcaption>
-                </figure>
-                <figure>
-                    <img src={patos} alt="gallinas" />
-                    <figcaption>patos</figcaption>
-                </figure>
-                <figure>
-                    <img src={vacas} alt="gallinas" />
-                    <figcaption>vacas</figcaption>
-                </figure>
-                <figure>
-                    <img src={peces} alt="gallinas" />
-                    <figcaption>peces</figcaption>
-                </figure>
+            <main className='main'>
+                <section>
+                    <figure>
+                        <img src={gallinas} alt="gallinas" />
+                        <figcaption>gallinas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={galpon} alt="gallinas" />
+                        <figcaption>galpon</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={patos} alt="gallinas" />
+                        <figcaption>patos</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={vacas} alt="gallinas" />
+                        <figcaption>vacas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src={peces} alt="gallinas" />
+                        <figcaption>peces</figcaption>
+                    </figure>
+                </section>
             </main>
         </>
     )
 }
-export {Products}
+export { Products }
