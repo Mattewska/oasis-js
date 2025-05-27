@@ -16,11 +16,18 @@ body{
 }
 .main {
     grid-area: main;
-    min-height: 90vh;
 }
-.root {
+.container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5rem 1fr;
+    min-height: 100vh;
+    row-gap: 3rem;
     grid-template-areas: 
     "header header header"
     "main main main";
+}
+
+h1,h2,h3{
+    padding: 2rem 1rem;
 }
