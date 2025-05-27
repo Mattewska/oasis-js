@@ -27,3 +27,7 @@ body{
     "header header header"
     "main main main";
 }
+
+h1,h2,h3{
+    padding: 2rem 1rem;
+}

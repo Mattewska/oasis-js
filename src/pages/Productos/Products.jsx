@@ -11,6 +11,7 @@ function Products() {
     return (
         <>
             <main className='main'>
+                <h1>Productos</h1>
                 <section>
                     <figure>
                         <img src={gallinas} alt="gallinas" />
