@@ -1,7 +1,8 @@
 const PublicRoutes = {
     Products: '/products',
     AboutMe: '/aboutMe',
-    Donar: '/donar'
+    Donar: '/donar',
+    CategoriaProducto: '/categoriaProducto'
 }
 
 export { PublicRoutes }

@@ -5,4 +5,4 @@ function Donar() {
         </main>
     )
 }
-export default Donar
+export { Donar };
