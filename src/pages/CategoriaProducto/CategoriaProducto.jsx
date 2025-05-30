@@ -10,13 +10,56 @@ import { PublicRoutes } from '../../models/routes'
 import { Products } from '../Productos/Products'
 
 function CategoriaProducto() {
+    const productsArray = [
+        {
+            nombre: "gallina",
+            categoria: "gallina",
+            descripcion: "gallina blanca, lista para sacrificar",
+        },
+        {
+            nombre: "Huevos",
+            categoria: "gallina",
+            descripcion: "Huevos blancos AAA"
+        },
+        {
+            nombre: "Leche",
+            categoria: "Gallinas",
+            descripcion: "leche de vaca pura, lista para tomar"
+        },
+        {
+            nombre: "Queso campesino",
+            categoria: "gallina",
+            descripcion: "Queso fresco por libras"
+        },
+        {
+            nombre: "Mojarra",
+            categoria: "peces",
+            descripcion: "mojarra roja, por libras"
+        },
+        {
+            nombre: "Bagre",
+            categoria: "peces",
+            descripcion: "bagre por libras"
+        },
+        {
+            nombre: "Tiburon",
+            categoria: "peces",
+            descripcion: "Tiburon por libras"
+        }
+    ];
+
+    const catGallina = productsArray.filter((item, indice) => {
+        return item.categoria === "gallina"
+    });
+
+
     return (
         <>
             <main className='main'>
                 <h1>Productos</h1>
                 <section>
                     <figure>
-                        <Link to={PublicRoutes.Products} element={<Products />}>
+                        <Link to={PublicRoutes.Products} categoria={catGallina} element={<Products />}>
                             <img src={gallinas} alt="gallinas" />
                             <figcaption>gallinas</figcaption>
                         </Link>

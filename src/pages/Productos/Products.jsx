@@ -7,7 +7,7 @@ import peces from '../../assets/piscicultura1.jpeg'
 import './products.css'
 
 
-function Products() {
+function Products({categoria}) {
     return (
         <>
             <main className='main'>
