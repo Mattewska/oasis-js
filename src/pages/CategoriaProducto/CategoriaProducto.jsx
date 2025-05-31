@@ -48,10 +48,9 @@ function CategoriaProducto() {
         }
     ];
 
-    const catGallina = productsArray.filter((item, indice) => {
-        return item.categoria === "gallina"
-    });
-
+    const aux = () => {
+        document.writeln("pasó");
+    }
 
     return (
         <>
@@ -59,7 +58,7 @@ function CategoriaProducto() {
                 <h1>Productos</h1>
                 <section>
                     <figure>
-                        <Link to={PublicRoutes.Products} categoria={catGallina} element={<Products />}>
+                        <Link to={PublicRoutes.Products} categoria={aux} element={<Products />}>
                             <img src={gallinas} alt="gallinas" />
                             <figcaption>gallinas</figcaption>
                         </Link>
