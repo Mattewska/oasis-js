@@ -5,20 +5,22 @@ import vacas from '../../assets/vacas1.jpeg'
 import peces from '../../assets/piscicultura1.jpeg'
 //? css
 import './style.css'
+//? dependencies
 import { Link } from 'react-router-dom'
 import { PublicRoutes } from '../../models/routes'
 import { Products } from '../Productos/Products'
+import { useState } from 'react'
 
 function CategoriaProducto() {
     const productsArray = [
         {
             nombre: "gallina",
-            categoria: "gallina",
+            categoria: "Gallinas",
             descripcion: "gallina blanca, lista para sacrificar",
         },
         {
             nombre: "Huevos",
-            categoria: "gallina",
+            categoria: "Gallinas",
             descripcion: "Huevos blancos AAA"
         },
         {
@@ -28,7 +30,7 @@ function CategoriaProducto() {
         },
         {
             nombre: "Queso campesino",
-            categoria: "gallina",
+            categoria: "Gallinas",
             descripcion: "Queso fresco por libras"
         },
         {
@@ -48,17 +50,19 @@ function CategoriaProducto() {
         }
     ];
 
-    const aux = () => {
-        document.writeln("pasó");
-    }
+    const [productos, setProductos] = useState([]);
 
+    const aux = (categoriaProductos) => {
+        const productosCategorizado = productsArray.filter((item) => item.categoria === categoriaProductos);
+        setProductos(productosCategorizado);
+    };
     return (
         <>
             <main className='main'>
                 <h1>Productos</h1>
                 <section>
                     <figure>
-                        <Link to={PublicRoutes.Products} categoria={aux} element={<Products />}>
+                        <Link to={PublicRoutes.Products} onClick={() => {aux("Gallinas")}} key={productos.nombre} value={productos} element={<Products />}>
                             <img src={gallinas} alt="gallinas" />
                             <figcaption>gallinas</figcaption>
                         </Link>
