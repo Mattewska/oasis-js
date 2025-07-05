@@ -9,8 +9,12 @@ import './style.css'
 import { Link } from 'react-router-dom'
 import { PublicRoutes } from '../../models/routes'
 import { Products } from '../Productos/Products'
+import { useContextProvider } from '../../context/imgContext'
+
 
 function CategoriaProducto() {
+
+    const { contextValue, setContextValue} = useContextProvider();
     
     function categoria(item) {
         switch(item){
