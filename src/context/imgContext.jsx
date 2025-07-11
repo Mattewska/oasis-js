@@ -1,16 +1,36 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const Context = createContext();
 
 export function ContextProvider(props){
 
-    const [ contextValue, setContextValue ] = useContext([]);
+    const Arrayproduct = [
+        {
+            categoria: "Gallina",
+            producto: "Huevos",
+            precio: 600
+        },
+        {
+            categoria: "Gallina",
+            producto: "Pollo",
+            precio: 15000
+        },
+        {
+            categoria: "Gallina",
+            producto: "Gallina",
+            precio: 20000
+        },
+    ]
+
+
+
+    const [ contextValue, setContextValue ] = useState(Arrayproduct);
     const contextObject = {contextValue, setContextValue};
 
     return(
-        <imgContext value={contextObject}>
+        <Context.Provider value={contextObject}>
             {props.children}
-        </imgContext>
+        </Context.Provider>
     )
 }
 

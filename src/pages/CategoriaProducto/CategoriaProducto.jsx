@@ -14,14 +14,12 @@ import { useContextProvider } from '../../context/imgContext'
 
 function CategoriaProducto() {
 
-    const { contextValue, setContextValue} = useContextProvider();
+    const useContext = useContextProvider();
+
     
     function categoria(item) {
-        switch(item){
-            case "Gallina":
-                console.log("Gallina");
-            break;
-        }
+        const productosFiltrados = useContext.contextValue.filter((productos) => productos.categoria == item);
+        useContext.setContextValue(productosFiltrados);
     }
 
     return (
@@ -30,7 +28,7 @@ function CategoriaProducto() {
                 <h1>Productos</h1>
                 <section>
                     <figure>
-                        <Link to={PublicRoutes.Products} onClick={() => {categoria("Gallinas")}}  element={<Products />}>
+                        <Link to={PublicRoutes.Products} onClick={() => {categoria("Gallinas")}} element={<Products />}>
                             <img src={gallinas} alt="gallinas" />
                             <figcaption>gallinas</figcaption>
                         </Link>
